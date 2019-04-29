@@ -2,7 +2,7 @@
 
 namespace ETHotfix
 {
-	[Event(EventIdType.EnterMapFinish)]
+	[Event(EventIdType.LobbyFinish)]
 	public class EnterMapFinish_RemoveLobbyUI: AEvent
 	{
 		public override void Run()

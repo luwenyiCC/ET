@@ -10,7 +10,8 @@
 		public const string Launcher = "Launcher";
 		public const string Robot = "Robot";
 		public const string RobotClient = "RobotClient";
-		public const string Realm = "Realm";
+        public const string Realm = "Realm";
+        public const string OutSpace = "OutSpace";
 	}
 	
 	public sealed class Scene: Entity

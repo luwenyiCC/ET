@@ -44,8 +44,25 @@ namespace ETEditor
 		{
 			GetWindow(typeof(BuildEditor));
 		}
+        [MenuItem("Tools/设置UI AssetBundle Name")]
+        public static void SetUIAssetBudleName()
+        {
 
-		private void OnGUI() 
+
+
+
+            int[] ids = Selection.instanceIDs;
+            foreach (var id in ids)
+            {
+
+                Debug.Log("选中的资源:"+id);
+
+                string assetPath = AssetDatabase.GetAssetPath(id);
+                var importer = AssetImporter.GetAtPath(assetPath);
+                importer.assetBundleName = Path.GetFileNameWithoutExtension(assetPath) + ".unity3d";
+            }
+        }
+        private void OnGUI() 
 		{
 			this.platformType = (PlatformType)EditorGUILayout.EnumPopup(platformType);
 			this.isBuildExe = EditorGUILayout.Toggle("是否打包EXE: ", this.isBuildExe);

@@ -28,6 +28,7 @@ namespace ETHotfix
 
 		private void Btn_Exit()
 		{
+            Debug.Log("返回基地");
 			//MapHelper.EnterMapAsync().Coroutine();
 		}
     }

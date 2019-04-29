@@ -2,7 +2,7 @@
 
 namespace ETHotfix
 {
-	[Event(EventIdType.LoginFinish)]
+	[Event(EventIdType.Init_UI_Lobby)]
 	public class LoginFinish_CreateLobbyUI: AEvent
 	{
 		public override void Run()

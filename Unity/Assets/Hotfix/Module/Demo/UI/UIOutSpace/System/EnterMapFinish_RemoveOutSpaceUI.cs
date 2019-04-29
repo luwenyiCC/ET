@@ -2,7 +2,7 @@
 
 namespace ETHotfix
 {
-	[Event(EventIdType.LobbyFinish)]
+	[Event(EventIdType.OutSpaceFinish)]
 	public class EnterMapFinish_RemoveOutSpaceUI : AEvent
 	{
 		public override void Run()
