@@ -304,6 +304,7 @@
     <Compile Include="Assets\Model\Module\Config\IConfig.cs" />
     <Compile Include="Assets\Model\Module\Demo\AnimatorComponent.cs" />
     <Compile Include="Assets\Model\Module\Demo\CameraComponent.cs" />
+    <Compile Include="Assets\Model\Module\Demo\Config\OutSpaceConfig.cs" />
     <Compile Include="Assets\Model\Module\Demo\Config\UnitConfig.cs" />
     <Compile Include="Assets\Model\Module\Demo\MoveComponent.cs" />
     <Compile Include="Assets\Model\Module\Demo\Player.cs" />
