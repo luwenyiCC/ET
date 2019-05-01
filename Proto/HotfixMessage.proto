@@ -50,7 +50,20 @@ message M2C_TestActorResponse // IActorLocationResponse
 	string Message = 92;
 	string Info = 1;
 }
+message C2M_ShipSkillRequest // IActorLocationRequest
+{
+	int32 RpcId = 90;
+	int64 ActorId = 91;
+	string Info = 1;
+}
 
+message M2C_ShipSkillResponse // IActorLocationResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	string Info = 1;
+}
 message PlayerInfo // IMessage
 {
 	int32 RpcId = 90;

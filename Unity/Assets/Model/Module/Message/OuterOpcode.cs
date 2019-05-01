@@ -30,6 +30,9 @@ namespace ETModel
 	[Message(OuterOpcode.Frame_ClickMap)]
 	public partial class Frame_ClickMap : IActorLocationMessage {}
 
+	[Message(OuterOpcode.Frame_Joystick)]
+	public partial class Frame_Joystick : IActorLocationMessage {}
+
 	[Message(OuterOpcode.M2C_PathfindingResult)]
 	public partial class M2C_PathfindingResult : IActorMessage {}
 
@@ -62,11 +65,12 @@ namespace ETModel
 		 public const ushort UnitInfo = 107;
 		 public const ushort M2C_CreateUnits = 108;
 		 public const ushort Frame_ClickMap = 109;
-		 public const ushort M2C_PathfindingResult = 110;
-		 public const ushort C2R_Ping = 111;
-		 public const ushort R2C_Ping = 112;
-		 public const ushort G2C_Test = 113;
-		 public const ushort C2M_Reload = 114;
-		 public const ushort M2C_Reload = 115;
+		 public const ushort Frame_Joystick = 110;
+		 public const ushort M2C_PathfindingResult = 111;
+		 public const ushort C2R_Ping = 112;
+		 public const ushort R2C_Ping = 113;
+		 public const ushort G2C_Test = 114;
+		 public const ushort C2M_Reload = 115;
+		 public const ushort M2C_Reload = 116;
 	}
 }

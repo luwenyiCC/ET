@@ -33,5 +33,6 @@
   <ItemGroup>
     <Folder Include="Module\Http\" />
     <Folder Include="Module\Demo\Entiry\" />
+    <Folder Include="Module\Demo\Ship\" />
   </ItemGroup>
 </Project>

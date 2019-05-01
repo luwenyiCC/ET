@@ -9,6 +9,7 @@ namespace ETHotfix
 	{
 		protected override void Run(Unit unit, Frame_ClickMap message)
 		{
+            //NOTE 点击屏幕事件
 			Vector3 target = new Vector3(message.X, message.Y, message.Z);
 			unit.GetComponent<UnitPathComponent>().MoveTo(target).Coroutine();
 			

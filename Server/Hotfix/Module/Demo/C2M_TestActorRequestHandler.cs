@@ -8,6 +8,7 @@ namespace ETHotfix
 	{
 		protected override async ETTask Run(Unit unit, C2M_TestActorRequest message, Action<M2C_TestActorResponse> reply)
 		{
+            //移动的最后发送这个消息  还不知道为什么
 			reply(new M2C_TestActorResponse(){Info = "actor rpc response"});
 			await ETTask.CompletedTask;
 		}

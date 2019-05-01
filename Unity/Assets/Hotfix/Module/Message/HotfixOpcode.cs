@@ -22,6 +22,12 @@ namespace ETHotfix
 	[Message(HotfixOpcode.M2C_TestActorResponse)]
 	public partial class M2C_TestActorResponse : IActorLocationResponse {}
 
+	[Message(HotfixOpcode.C2M_ShipSkillRequest)]
+	public partial class C2M_ShipSkillRequest : IActorLocationRequest {}
+
+	[Message(HotfixOpcode.M2C_ShipSkillResponse)]
+	public partial class M2C_ShipSkillResponse : IActorLocationResponse {}
+
 	[Message(HotfixOpcode.PlayerInfo)]
 	public partial class PlayerInfo : IMessage {}
 
@@ -49,10 +55,12 @@ namespace ETHotfix
 		 public const ushort G2C_TestHotfixMessage = 10005;
 		 public const ushort C2M_TestActorRequest = 10006;
 		 public const ushort M2C_TestActorResponse = 10007;
-		 public const ushort PlayerInfo = 10008;
-		 public const ushort C2G_PlayerInfo = 10009;
-		 public const ushort G2C_PlayerInfo = 10010;
-		 public const ushort C2R_RegisterAndLogin = 10011;
-		 public const ushort R2C_RegisterAndLogin = 10012;
+		 public const ushort C2M_ShipSkillRequest = 10008;
+		 public const ushort M2C_ShipSkillResponse = 10009;
+		 public const ushort PlayerInfo = 10010;
+		 public const ushort C2G_PlayerInfo = 10011;
+		 public const ushort G2C_PlayerInfo = 10012;
+		 public const ushort C2R_RegisterAndLogin = 10013;
+		 public const ushort R2C_RegisterAndLogin = 10014;
 	}
 }

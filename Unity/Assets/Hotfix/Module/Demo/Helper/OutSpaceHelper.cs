@@ -15,7 +15,7 @@ namespace ETHotfix
 
                 // 加载场景资源
                 await ETModel.Game.Scene.GetComponent<ResourcesComponent>().LoadBundleAsync("outspace.unity3d");
-                // 切换到map场景
+                // 切换到outspace场景
                 using (SceneChangeComponent sceneChangeComponent = ETModel.Game.Scene.AddComponent<SceneChangeComponent>())
                 {
                     await sceneChangeComponent.ChangeSceneAsync(SceneType.OutSpace);
@@ -24,7 +24,7 @@ namespace ETHotfix
                 G2C_EnterMap g2CEnterMap = await ETModel.SessionComponent.Instance.Session.Call(new C2G_EnterMap()) as G2C_EnterMap;
                 PlayerComponent.Instance.MyPlayer.UnitId = g2CEnterMap.UnitId;
 				
-                Game.Scene.AddComponent<OperaComponent>();
+                Game.Scene.AddComponent<OutSpaceComponent>();
 
                 Game.EventSystem.Run(EventIdType.LobbyFinish);
                 Game.EventSystem.Run(EventIdType.Init_UI_OutSpace);

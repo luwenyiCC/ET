@@ -9,8 +9,14 @@ namespace App
 	{
 		private static void Main(string[] args)
 		{
-			// 异步方法全部会回掉到主线程
-			SynchronizationContext.SetSynchronizationContext(OneThreadSynchronizationContext.Instance);
+
+            {//debug --appId=1 --appType=AllServer --config=../Config/StartConfig/LocalAllServer.txt
+
+               args = new string[]{ "--appId=1", "--appType=AllServer", "--config=../Config/StartConfig/LocalAllServer.txt" };
+            }
+
+            // 异步方法全部会回掉到主线程
+            SynchronizationContext.SetSynchronizationContext(OneThreadSynchronizationContext.Instance);
 			
 			try
 			{			

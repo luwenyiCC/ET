@@ -73,7 +73,7 @@ message Frame_ClickMap // IActorLocationMessage
 	float Z = 3;
 }
 
-message Frame_ClickMap // IActorLocationMessage
+message Frame_Joystick // IActorLocationMessage
 {
 	int32 RpcId = 90;
 	int64 ActorId = 93;

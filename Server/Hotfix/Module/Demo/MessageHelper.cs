@@ -6,6 +6,7 @@ namespace ETHotfix
 	{
 		public static void Broadcast(IActorMessage message)
 		{
+            //广播事件
 			Unit[] units = Game.Scene.GetComponent<UnitComponent>().GetAll();
 			ActorMessageSenderComponent actorLocationSenderComponent = Game.Scene.GetComponent<ActorMessageSenderComponent>();
 			foreach (Unit unit in units)

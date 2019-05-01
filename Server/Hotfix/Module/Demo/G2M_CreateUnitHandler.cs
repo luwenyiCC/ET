@@ -15,6 +15,7 @@ namespace ETHotfix
 		
 		protected async ETVoid RunAsync(Session session, G2M_CreateUnit message, Action<M2G_CreateUnit> reply)
 		{
+            //NOTE 第二时间 游戏服务器收到创建Unit的请求
 			M2G_CreateUnit response = new M2G_CreateUnit();
 			try
 			{
