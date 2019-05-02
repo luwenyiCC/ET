@@ -231,7 +231,23 @@ message G2M_CreateUnit // IRequest
     int64 PlayerId = 1;
     int64 GateSessionId = 2;
 }
+message G2M_CreateShip // IRequest
+{
+    int32 RpcId = 90;
+    int64 PlayerId = 1;
+    int64 GateSessionId = 2;
+}
+message M2G_CreateShip // IResponse
+{
+    int32 RpcId = 90;
+    int32 Error = 91;
+    string Message = 92;
 
+    // 自己的ship id
+    int64 ShipId = 1;
+    // 所有的ship
+    repeated ShipInfo Ships = 2;
+}
 message M2G_CreateUnit // IResponse
 {
     int32 RpcId = 90;

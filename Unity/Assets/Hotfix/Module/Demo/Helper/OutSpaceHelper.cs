@@ -21,8 +21,8 @@ namespace ETHotfix
                     await sceneChangeComponent.ChangeSceneAsync(SceneType.OutSpace);
                 }
 				
-                G2C_EnterMap g2CEnterMap = await ETModel.SessionComponent.Instance.Session.Call(new C2G_EnterMap()) as G2C_EnterMap;
-                PlayerComponent.Instance.MyPlayer.UnitId = g2CEnterMap.UnitId;
+                G2C_EnterOutSpace g2CEnterMap = await ETModel.SessionComponent.Instance.Session.Call(new C2G_EnterOutSpace()) as G2C_EnterOutSpace;
+                PlayerComponent.Instance.MyPlayer.UnitId = g2CEnterMap.ShipId;
 				
                 Game.Scene.AddComponent<OutSpaceComponent>();
 

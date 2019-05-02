@@ -35,7 +35,8 @@ namespace ETModel
 
 		public void Awake()
 		{
-			Animator animator = this.GetParent<Unit>().GameObject.GetComponent<Animator>();
+            Animator animator = this.GetParent<Ship>().GameObject.GetComponent<Animator>();
+            //Animator animator = this.GetParent<Unit>().GameObject.GetComponent<Animator>();
 
 			if (animator == null)
 			{

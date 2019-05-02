@@ -21,8 +21,22 @@ namespace ETModel
 
 // 自己的unit id
 // 所有的unit
+	[Message(OuterOpcode.C2G_EnterOutSpace)]
+	public partial class C2G_EnterOutSpace : IRequest {}
+
+	[Message(OuterOpcode.G2C_EnterOutSpace)]
+	public partial class G2C_EnterOutSpace : IResponse {}
+
+// 自己的unit id
+// 所有的Ship
+	[Message(OuterOpcode.ShipInfo)]
+	public partial class ShipInfo {}
+
 	[Message(OuterOpcode.UnitInfo)]
 	public partial class UnitInfo {}
+
+	[Message(OuterOpcode.M2C_CreateShips)]
+	public partial class M2C_CreateShips : IActorMessage {}
 
 	[Message(OuterOpcode.M2C_CreateUnits)]
 	public partial class M2C_CreateUnits : IActorMessage {}
@@ -62,15 +76,19 @@ namespace ETModel
 		 public const ushort Actor_TransferResponse = 104;
 		 public const ushort C2G_EnterMap = 105;
 		 public const ushort G2C_EnterMap = 106;
-		 public const ushort UnitInfo = 107;
-		 public const ushort M2C_CreateUnits = 108;
-		 public const ushort Frame_ClickMap = 109;
-		 public const ushort Frame_Joystick = 110;
-		 public const ushort M2C_PathfindingResult = 111;
-		 public const ushort C2R_Ping = 112;
-		 public const ushort R2C_Ping = 113;
-		 public const ushort G2C_Test = 114;
-		 public const ushort C2M_Reload = 115;
-		 public const ushort M2C_Reload = 116;
+		 public const ushort C2G_EnterOutSpace = 107;
+		 public const ushort G2C_EnterOutSpace = 108;
+		 public const ushort ShipInfo = 109;
+		 public const ushort UnitInfo = 110;
+		 public const ushort M2C_CreateShips = 111;
+		 public const ushort M2C_CreateUnits = 112;
+		 public const ushort Frame_ClickMap = 113;
+		 public const ushort Frame_Joystick = 114;
+		 public const ushort M2C_PathfindingResult = 115;
+		 public const ushort C2R_Ping = 116;
+		 public const ushort R2C_Ping = 117;
+		 public const ushort G2C_Test = 118;
+		 public const ushort C2M_Reload = 119;
+		 public const ushort M2C_Reload = 120;
 	}
 }

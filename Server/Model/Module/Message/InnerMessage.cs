@@ -350,6 +350,36 @@ namespace ETModel
 
 	}
 
+	[Message(InnerOpcode.G2M_CreateShip)]
+	public partial class G2M_CreateShip: IRequest
+	{
+		public int RpcId { get; set; }
+
+		public long PlayerId { get; set; }
+
+		public long GateSessionId { get; set; }
+
+	}
+
+	[Message(InnerOpcode.M2G_CreateShip)]
+	public partial class M2G_CreateShip: IResponse
+	{
+		public int RpcId { get; set; }
+
+		public int Error { get; set; }
+
+		public string Message { get; set; }
+
+// 自己的ship id
+// 自己的ship id
+		public long ShipId { get; set; }
+
+// 所有的ship
+// 所有的ship
+		public List<ShipInfo> Ships = new List<ShipInfo>();
+
+	}
+
 	[Message(InnerOpcode.M2G_CreateUnit)]
 	public partial class M2G_CreateUnit: IResponse
 	{

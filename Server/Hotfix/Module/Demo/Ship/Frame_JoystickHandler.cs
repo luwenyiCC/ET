@@ -10,7 +10,7 @@ namespace ETHotfix
 		protected override void Run(Ship ship, Frame_Joystick message)
 		{
 			Vector3 target = new Vector3(message.X, message.Y, message.Z);
-			//unit.GetComponent<UnitPathComponent>().MoveTo(target).Coroutine();
+            ship.GetComponent<ShipSkillComponent>().MoveTo(target).Coroutine();
 			
 		}
 	}

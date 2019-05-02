@@ -82,7 +82,8 @@ namespace App
 						break;
 					case AppType.Map:
 						Game.Scene.AddComponent<NetInnerComponent, string>(innerConfig.Address);
-						Game.Scene.AddComponent<UnitComponent>();
+                        Game.Scene.AddComponent<UnitComponent>();
+                        Game.Scene.AddComponent<ShipComponent>();
 						Game.Scene.AddComponent<LocationProxyComponent>();
 						Game.Scene.AddComponent<ActorMessageSenderComponent>();
 						Game.Scene.AddComponent<ActorLocationSenderComponent>();
@@ -128,7 +129,8 @@ namespace App
 						Game.Scene.AddComponent<PathfindingComponent>();
 						
 						Game.Scene.AddComponent<PlayerComponent>();
-						Game.Scene.AddComponent<UnitComponent>();
+                        Game.Scene.AddComponent<UnitComponent>();
+                        Game.Scene.AddComponent<ShipComponent>();
 
 						Game.Scene.AddComponent<ConsoleComponent>();
 						// Game.Scene.AddComponent<HttpComponent>();

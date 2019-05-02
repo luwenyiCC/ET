@@ -45,7 +45,29 @@ message G2C_EnterMap // IResponse
 	// 所有的unit
 	repeated UnitInfo Units = 2;
 }
+message C2G_EnterOutSpace // IRequest
+{
+	int32 RpcId = 90;
+}
 
+message G2C_EnterOutSpace // IResponse
+{
+	int32 RpcId = 90;
+	int32 Error = 91;
+	string Message = 92;
+	// 自己的unit id
+	int64 ShipId = 1;
+	// 所有的Ship
+	repeated ShipInfo Units = 2;
+}
+message ShipInfo
+{
+	int64 ShipId  = 1;
+
+	float X = 2;
+	float Y = 3;
+	float Z = 4;
+}
 message UnitInfo
 {
 	int64 UnitId  = 1;
@@ -54,6 +76,13 @@ message UnitInfo
 	float Y = 3;
 	float Z = 4;
 }
+message M2C_CreateShips // IActorMessage
+{
+	int32 RpcId = 90;
+	int64 ActorId = 93;
+    repeated ShipInfo Ships = 1;
+}
+
 
 message M2C_CreateUnits // IActorMessage
 {

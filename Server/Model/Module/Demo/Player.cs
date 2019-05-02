@@ -12,8 +12,9 @@
 	public sealed class Player : Entity
 	{
 		public string Account { get; private set; }
-		
-		public long UnitId { get; set; }
+
+        public long UnitId { get; set; }
+        public long ShipId { get; set; }
 
 		public void Awake(string account)
 		{

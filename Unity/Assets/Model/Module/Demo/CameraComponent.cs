@@ -25,7 +25,8 @@ namespace ETModel
 		// 战斗摄像机
 		public Camera mainCamera;
 
-		public Unit Unit;
+        public Ship ship;
+        //public Unit Unit;
 
 		public Camera MainCamera
 		{
@@ -49,7 +50,7 @@ namespace ETModel
 		private void UpdatePosition()
 		{
 			Vector3 cameraPos = this.mainCamera.transform.position;
-			this.mainCamera.transform.position = new Vector3(this.Unit.Position.x, cameraPos.y, this.Unit.Position.z - 1);
+			this.mainCamera.transform.position = new Vector3(this.ship.Position.x, cameraPos.y, this.ship.Position.z - 1);
 		}
 	}
 }
