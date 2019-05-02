@@ -26,7 +26,32 @@ namespace ETHotfix
                 await self.Entity.GetComponent<MoveComponent>().MoveToAsync(v3, self.CancellationTokenSource.Token);
             }
         }
-        
+        /// <summary>
+        /// 预备技能
+        /// </summary>
+        /// <returns>The skill.</returns>
+        /// <param name="self">Self.</param>
+        /// <param name="target">Target.</param>
+        public static async ETVoid PrepSkill(this ShipSkillComponent self, Vector3 target)
+        {
+            float maxValue = Mathf.Max(target.x, target.y, target.z);
+            if (maxValue == target.x)
+            {
+                Log.Debug("激光");
+            }
+            else if (maxValue == target.y)
+            {
+                Log.Debug("护盾");
+
+            }
+            else
+            {
+                Log.Debug("弹幕");
+
+            }
+        }
+
+
         public static async ETVoid MoveTo(this ShipSkillComponent self, Vector3 target)
         {
             if ((self.Target - target).magnitude < 0.1f)
@@ -37,13 +62,13 @@ namespace ETHotfix
             self.Target = target;
 
             Ship unit = self.GetParent<Ship>();
-            
-            
+
+
             PathfindingComponent pathfindingComponent = Game.Scene.GetComponent<PathfindingComponent>();
             self.ABPath = ComponentFactory.Create<ABPathWrap, Vector3, Vector3>(unit.Position, new Vector3(target.x, target.y, target.z));
             pathfindingComponent.Search(self.ABPath);
             Log.Debug($"find result: {self.ABPath.Result.ListToString()}");
-            
+
             self.CancellationTokenSource?.Cancel();
             self.CancellationTokenSource = new CancellationTokenSource();
             await self.MoveAsync(self.ABPath.Result);
@@ -61,7 +86,7 @@ namespace ETHotfix
             m2CPathfindingResult.Y = unitPos.y;
             m2CPathfindingResult.Z = unitPos.z;
             m2CPathfindingResult.Id = unit.Id;
-                
+
             for (int i = 0; i < offset; ++i)
             {
                 if (index + i >= self.ABPath.Result.Count)

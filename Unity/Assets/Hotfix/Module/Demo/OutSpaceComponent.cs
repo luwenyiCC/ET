@@ -37,14 +37,14 @@ namespace ETHotfix
 
         public void Update()
         {
-            if (Input.GetMouseButtonDown(1))
-            {
-                frame_Joystick.X = 0;
-                frame_Joystick.Y = 0;
-                frame_Joystick.Z = 0;
-                ETModel.SessionComponent.Instance.Session.Send(frame_Joystick);
-                this.TestActor().Coroutine();
-            }
+            //if (Input.GetMouseButtonDown(1))
+            //{
+            //    frame_Joystick.X = 0;
+            //    frame_Joystick.Y = 0;
+            //    frame_Joystick.Z = 0;
+            //    ETModel.SessionComponent.Instance.Session.Send(frame_Joystick);
+            //    this.TestActor().Coroutine();
+            //}
     //        if (Input.GetMouseButtonDown(1))
     //        {
     //            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
